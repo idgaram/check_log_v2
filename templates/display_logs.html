@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display Logs</title>
+  </head>
+  <body>
+    <h1>Logs</h1>
+    <h2>Site 1</h2>
+    <ul>
+      {% for index in range(logs.site_1.status|length) %}
+      <li>
+        Status: {{ logs.site_1.status[index] }}, Time: {{
+        logs.site_1.time_test[index] }}
+      </li>
+      {% endfor %}
+    </ul>
+    <h2>Site 2</h2>
+    <ul>
+      {% for index in range(logs.site_2.status|length) %}
+      <li>
+        Status: {{ logs.site_2.status[index] }}, Time: {{
+        logs.site_2.time_test[index] }}
+      </li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
